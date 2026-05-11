@@ -4,11 +4,6 @@
   --page-scale: 0.72;
 }
 
-@page {
-  size: A5;
-  margin: 14mm;
-}
-
 body {
   background: #e5e7eb;
   overflow-anchor: none;
@@ -46,7 +41,6 @@ body {
 }
 
 #preview {
-  transition: opacity 180ms ease;
   overflow-anchor: none;
 }
 
@@ -63,29 +57,6 @@ body {
 
 .pagedjs_pagebox {
   outline: 1px solid rgba(15, 23, 42, 0.12);
-}
-
-.chapter {
-  break-before: page;
-}
-
-.avoid-break {
-  break-inside: avoid;
-}
-
-.running-header {
-  position: running(runningHeader);
-}
-
-@page {
-  @top-left {
-    content: element(runningHeader);
-  }
-  @bottom-right {
-    content: counter(page);
-    font-size: 9pt;
-    color: #64748b;
-  }
 }
 
 @media print {

@@ -13,8 +13,19 @@
     <p class="mb-3 text-[8pt] font-semibold uppercase tracking-[0.22em] text-slate-400" x-text="section.kicker"></p>
     <h2 class="mb-4 text-[22pt] font-semibold leading-tight tracking-tight" x-text="section.title"></h2>
 
-    <template x-for="paragraph in section.paragraphs" :key="paragraph.id">
-      <p class="mb-4 text-[10.5pt] leading-relaxed text-slate-700" x-text="paragraph.text"></p>
+    <template x-for="block in section.paragraphs" :key="block.id">
+      <div>
+        <template x-if="block.type === 'image'">
+          <figure class="avoid-break my-5">
+            <img :src="block.src" :alt="block.alt" class="w-full rounded-xl border border-slate-200 object-cover" />
+            <figcaption x-show="block.alt" class="mt-2 text-[8pt] leading-relaxed text-slate-400" x-text="block.alt"></figcaption>
+          </figure>
+        </template>
+
+        <template x-if="block.type !== 'image'">
+          <p class="mb-4 text-[10.5pt] leading-relaxed text-slate-700" x-text="block.text"></p>
+        </template>
+      </div>
     </template>
 
     <div x-show="section.metric || section.note" class="avoid-break my-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">

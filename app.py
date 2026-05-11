@@ -2,7 +2,7 @@ import json
 import time
 from pathlib import Path
 
-from flask import Flask, Response, jsonify, render_template
+from flask import Flask, Response, jsonify, render_template, send_from_directory
 
 from parser import parse_document
 
@@ -11,7 +11,8 @@ BASE_DIR = Path(__file__).resolve().parent
 USER_DIR = BASE_DIR / "user"
 CONTENT_PATH = USER_DIR / "content.md"
 TEMPLATE_PATH = USER_DIR / "template.html"
-WATCHED_PATHS = (CONTENT_PATH, TEMPLATE_PATH)
+PAGE_CSS_PATH = USER_DIR / "page.css"
+WATCHED_PATHS = (CONTENT_PATH, TEMPLATE_PATH, PAGE_CSS_PATH)
 
 app = Flask(__name__)
 
@@ -24,6 +25,10 @@ def read_template():
     return TEMPLATE_PATH.read_text(encoding="utf-8")
 
 
+def read_page_css():
+    return PAGE_CSS_PATH.read_text(encoding="utf-8")
+
+
 def file_version(path):
     try:
         stat = path.stat()
@@ -32,8 +37,16 @@ def file_version(path):
     return f"{stat.st_mtime_ns}:{stat.st_size}"
 
 
+def watched_paths():
+    paths = list(WATCHED_PATHS)
+    assets_dir = USER_DIR / "assets"
+    if assets_dir.exists():
+        paths.extend(path for path in assets_dir.rglob("*") if path.is_file())
+    return sorted(set(paths))
+
+
 def app_version():
-    return "|".join(file_version(path) for path in WATCHED_PATHS)
+    return "|".join(f"{path.relative_to(USER_DIR)}:{file_version(path)}" for path in watched_paths())
 
 
 @app.get("/")
@@ -49,6 +62,16 @@ def get_document():
 @app.get("/api/template")
 def get_template():
     return Response(read_template(), mimetype="text/html")
+
+
+@app.get("/api/page-css")
+def get_page_css():
+    return Response(read_page_css(), mimetype="text/css")
+
+
+@app.get("/user/assets/<path:filename>")
+def user_asset(filename):
+    return send_from_directory(USER_DIR / "assets", filename)
 
 
 @app.get("/api/events")

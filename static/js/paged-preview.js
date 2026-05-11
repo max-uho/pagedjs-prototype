@@ -37,33 +37,6 @@
     });
   }
 
-  const PAGED_LAYOUT_CSS = `
-    @page {
-      size: A5;
-      margin: 14mm;
-      @top-left {
-        content: element(runningHeader);
-      }
-      @bottom-right {
-        content: counter(page);
-        font-size: 9pt;
-        color: #64748b;
-      }
-    }
-
-    .chapter {
-      break-before: page;
-    }
-
-    .avoid-break {
-      break-inside: avoid;
-    }
-
-    .running-header {
-      position: running(runningHeader);
-    }
-  `;
-
   function collectRuntimeCss() {
     return [...document.querySelectorAll("style")]
       .map(node => node.textContent || "")
@@ -71,8 +44,8 @@
       .join("\n");
   }
 
-  function createPagedStylesheetUrl() {
-    const css = `${collectRuntimeCss()}\n${PAGED_LAYOUT_CSS}`;
+  function createPagedStylesheetUrl(pageCss) {
+    const css = `${collectRuntimeCss()}\n${pageCss}`;
     return URL.createObjectURL(new Blob([css], { type: "text/css" }));
   }
 
@@ -86,6 +59,12 @@
       if (isPagedGeneratedStyle(node) && !keepStyles.has(node)) {
         node.remove();
       }
+    });
+  }
+
+  function cleanupStalePagedStylesAfterPaint(keepStyles) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => removeStalePagedStyles(keepStyles));
     });
   }
 
@@ -108,7 +87,7 @@
     return clone.innerHTML;
   }
 
-  async function renderPaged(sourceTemplate, doc, nextTick) {
+  async function renderPaged(sourceTemplate, doc, pageCss, nextTick) {
     const anchor = getScrollAnchor();
     const source = document.querySelector("#source");
     const preview = document.querySelector("#preview");
@@ -133,7 +112,7 @@
     document.body.appendChild(nextPreview);
 
     const existingStyles = new Set(document.querySelectorAll("style"));
-    const pagedStylesheetUrl = createPagedStylesheetUrl();
+    const pagedStylesheetUrl = createPagedStylesheetUrl(pageCss);
     try {
       const previewer = new Paged.Previewer();
       const flow = await previewer.preview(
@@ -144,13 +123,15 @@
       const newStyles = new Set(
         [...document.querySelectorAll("style")].filter(node => !existingStyles.has(node))
       );
-      removeStalePagedStyles(newStyles);
 
       preview.replaceChildren(...Array.from(nextPreview.childNodes));
+      cleanupStalePagedStylesAfterPaint(newStyles);
       restoreScrollAnchor({
         number: Math.min(anchor.number, flow.total),
         offset: anchor.offset
       });
+
+      await nextTick();
 
       return flow.total;
     } finally {

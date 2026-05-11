@@ -1,4 +1,8 @@
+import re
+
+
 META_KEYS = {"kicker", "metric", "note"}
+IMAGE_RE = re.compile(r"^!\[(?P<alt>[^\]]*)\]\((?P<src>[^)]+)\)$")
 
 
 def parse_document(markdown_text):
@@ -53,10 +57,25 @@ def parse_sections(body):
             current["paragraphs"].append(
                 {
                     "id": f"{current['id']}-p{len(current['paragraphs'])}",
+                    "type": "text",
                     "text": text,
                 }
             )
         paragraph_lines.clear()
+
+    def append_image(match):
+        src = match.group("src").strip()
+        if not src.startswith(("/", "http://", "https://", "data:")):
+            src = f"/user/{src}"
+
+        current["paragraphs"].append(
+            {
+                "id": f"{current['id']}-p{len(current['paragraphs'])}",
+                "type": "image",
+                "alt": match.group("alt").strip(),
+                "src": src,
+            }
+        )
 
     for raw_line in body.split("\n"):
         line = raw_line.rstrip()
@@ -80,6 +99,12 @@ def parse_sections(body):
 
         if not line.strip():
             flush_paragraph()
+            continue
+
+        image_match = IMAGE_RE.match(line.strip())
+        if image_match:
+            flush_paragraph()
+            append_image(image_match)
             continue
 
         if not current["paragraphs"] and not paragraph_lines and ":" in line:

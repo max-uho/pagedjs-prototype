@@ -1,0 +1,26 @@
+@page {
+  size: A5;
+  margin: 14mm;
+
+  @top-left {
+    content: element(runningHeader);
+  }
+
+  @bottom-right {
+    content: counter(page);
+    font-size: 9pt;
+    color: #64748b;
+  }
+}
+
+.chapter {
+  break-before: page;
+}
+
+.avoid-break {
+  break-inside: avoid;
+}
+
+.running-header {
+  position: running(runningHeader);
+}

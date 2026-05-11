@@ -11,10 +11,17 @@
     return response.text();
   }
 
+  async function fetchPageCss() {
+    const response = await fetch("/api/page-css", { cache: "no-store" });
+    if (!response.ok) throw new Error(`Failed to load page CSS: ${response.status}`);
+    return response.text();
+  }
+
   window.app = function app() {
     return {
       doc: { title: "", subtitle: "", sections: [] },
       sourceTemplate: "",
+      pageCss: "",
       pageCount: 0,
       isRendering: false,
       events: null,
@@ -25,13 +32,15 @@
       },
 
       async refresh() {
-        const [nextDoc, nextTemplate] = await Promise.all([
+        const [nextDoc, nextTemplate, nextPageCss] = await Promise.all([
           fetchDocument(),
-          fetchTemplate()
+          fetchTemplate(),
+          fetchPageCss()
         ]);
 
         this.doc = nextDoc;
         this.sourceTemplate = nextTemplate;
+        this.pageCss = nextPageCss;
         await this.renderPaged();
       },
 
@@ -52,6 +61,7 @@
           this.pageCount = await window.PagedPreview.renderPaged(
             this.sourceTemplate,
             this.doc,
+            this.pageCss,
             () => this.$nextTick()
           );
         } finally {
