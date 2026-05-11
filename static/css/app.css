@@ -11,6 +11,7 @@
 
 body {
   background: #e5e7eb;
+  overflow-anchor: none;
 }
 
 /* Alpine renders this source template, then Paged.js receives source.innerHTML.
@@ -29,21 +30,24 @@ body {
 }
 
 .pagedjs_pages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  padding: 32px 0 80px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 32px !important;
+  padding: 32px 0 80px !important;
+  overflow-anchor: none;
 }
 
 .pagedjs_page {
-  background: white;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
-  zoom: var(--page-scale);
+  background: white !important;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16) !important;
+  zoom: var(--page-scale) !important;
+  overflow-anchor: none;
 }
 
 #preview {
   transition: opacity 180ms ease;
+  overflow-anchor: none;
 }
 
 .preview-render-target {

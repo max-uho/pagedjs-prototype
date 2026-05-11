@@ -1,0 +1,26 @@
+<header class="running-header text-[9pt] text-slate-500">
+  <span x-text="doc.title"></span>
+</header>
+
+<section class="mb-10">
+  <p class="mb-3 text-[9pt] uppercase tracking-[0.25em] text-slate-400">Live markdown document</p>
+  <h1 class="mb-4 text-[30pt] font-semibold leading-none tracking-tight" x-text="doc.title"></h1>
+  <p class="text-[12pt] leading-relaxed text-slate-600" x-text="doc.subtitle"></p>
+</section>
+
+<template x-for="section in doc.sections" :key="section.id">
+  <section class="chapter">
+    <p class="mb-3 text-[8pt] font-semibold uppercase tracking-[0.22em] text-slate-400" x-text="section.kicker"></p>
+    <h2 class="mb-4 text-[22pt] font-semibold leading-tight tracking-tight" x-text="section.title"></h2>
+
+    <template x-for="paragraph in section.paragraphs" :key="paragraph.id">
+      <p class="mb-4 text-[10.5pt] leading-relaxed text-slate-700" x-text="paragraph.text"></p>
+    </template>
+
+    <div x-show="section.metric || section.note" class="avoid-break my-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+      <p class="mb-2 text-[8pt] font-semibold uppercase tracking-[0.18em] text-slate-400">Markdown value</p>
+      <p x-show="section.metric" class="text-[20pt] font-semibold tabular-nums" x-text="section.metric"></p>
+      <p x-show="section.note" class="mt-2 text-[9pt] leading-relaxed text-slate-500" x-text="section.note"></p>
+    </div>
+  </section>
+</template>

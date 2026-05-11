@@ -2,35 +2,38 @@ import json
 import time
 from pathlib import Path
 
-from flask import Flask, Response, jsonify, render_template, request
+from flask import Flask, Response, jsonify, render_template
+
+from parser import parse_document
 
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_PATH = BASE_DIR / "data" / "document.json"
+USER_DIR = BASE_DIR / "user"
+CONTENT_PATH = USER_DIR / "content.md"
+TEMPLATE_PATH = USER_DIR / "template.html"
+WATCHED_PATHS = (CONTENT_PATH, TEMPLATE_PATH)
 
 app = Flask(__name__)
 
 
 def read_document():
-    return json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    return parse_document(CONTENT_PATH.read_text(encoding="utf-8"))
 
 
-def write_document(document):
-    DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
-    tmp_path = DATA_PATH.with_suffix(".json.tmp")
-    tmp_path.write_text(
-        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    tmp_path.replace(DATA_PATH)
+def read_template():
+    return TEMPLATE_PATH.read_text(encoding="utf-8")
 
 
-def document_version():
+def file_version(path):
     try:
-        stat = DATA_PATH.stat()
+        stat = path.stat()
     except FileNotFoundError:
         return "missing"
     return f"{stat.st_mtime_ns}:{stat.st_size}"
+
+
+def app_version():
+    return "|".join(file_version(path) for path in WATCHED_PATHS)
 
 
 @app.get("/")
@@ -43,25 +46,20 @@ def get_document():
     return jsonify(read_document())
 
 
-@app.put("/api/document")
-def put_document():
-    document = request.get_json(silent=True)
-    if not isinstance(document, dict):
-        return jsonify({"error": "Expected a JSON object."}), 400
-
-    write_document(document)
-    return jsonify({"ok": True, "version": document_version()})
+@app.get("/api/template")
+def get_template():
+    return Response(read_template(), mimetype="text/html")
 
 
 @app.get("/api/events")
 def events():
     def stream():
-        last_version = document_version()
+        last_version = app_version()
         yield f"event: ready\ndata: {json.dumps({'version': last_version})}\n\n"
 
         while True:
             time.sleep(0.5)
-            next_version = document_version()
+            next_version = app_version()
             if next_version != last_version:
                 last_version = next_version
                 yield f"event: document\ndata: {json.dumps({'version': next_version})}\n\n"
