@@ -1,0 +1,702 @@
+{
+  "title": "JSON → Alpine → Paged.js — Revision 5",
+  "subtitle": "A tiny single-file prototype using CDN dependencies. The document is deliberately long enough to create at least twenty pages.",
+  "sections": [
+    {
+      "id": "section-0",
+      "kicker": "Section 01",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "85%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s0-p0",
+          "text": "This paragraph belongs to section 1 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s0-p1",
+          "text": "This paragraph belongs to section 1 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s0-p2",
+          "text": "This paragraph belongs to section 1 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s0-p3",
+          "text": "This paragraph belongs to section 1 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s0-p4",
+          "text": "This paragraph belongs to section 1 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-1",
+      "kicker": "Section 02",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "86%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s1-p0",
+          "text": "This paragraph belongs to section 2 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s1-p1",
+          "text": "This paragraph belongs to section 2 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s1-p2",
+          "text": "This paragraph belongs to section 2 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s1-p3",
+          "text": "This paragraph belongs to section 2 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s1-p4",
+          "text": "This paragraph belongs to section 2 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "kicker": "Section 03",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "87%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s2-p0",
+          "text": "This paragraph belongs to section 3 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s2-p1",
+          "text": "This paragraph belongs to section 3 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s2-p2",
+          "text": "This paragraph belongs to section 3 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s2-p3",
+          "text": "This paragraph belongs to section 3 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s2-p4",
+          "text": "This paragraph belongs to section 3 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-3",
+      "kicker": "Section 04",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "88%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s3-p0",
+          "text": "This paragraph belongs to section 4 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s3-p1",
+          "text": "This paragraph belongs to section 4 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s3-p2",
+          "text": "This paragraph belongs to section 4 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s3-p3",
+          "text": "This paragraph belongs to section 4 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s3-p4",
+          "text": "This paragraph belongs to section 4 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-4",
+      "kicker": "Section 05",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "89%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s4-p0",
+          "text": "This paragraph belongs to section 5 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s4-p1",
+          "text": "This paragraph belongs to section 5 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s4-p2",
+          "text": "This paragraph belongs to section 5 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s4-p3",
+          "text": "This paragraph belongs to section 5 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s4-p4",
+          "text": "This paragraph belongs to section 5 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-5",
+      "kicker": "Section 06",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "90%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s5-p0",
+          "text": "This paragraph belongs to section 6 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s5-p1",
+          "text": "This paragraph belongs to section 6 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s5-p2",
+          "text": "This paragraph belongs to section 6 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s5-p3",
+          "text": "This paragraph belongs to section 6 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s5-p4",
+          "text": "This paragraph belongs to section 6 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-6",
+      "kicker": "Section 07",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "91%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s6-p0",
+          "text": "This paragraph belongs to section 7 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s6-p1",
+          "text": "This paragraph belongs to section 7 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s6-p2",
+          "text": "This paragraph belongs to section 7 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s6-p3",
+          "text": "This paragraph belongs to section 7 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s6-p4",
+          "text": "This paragraph belongs to section 7 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "kicker": "Section 08",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "92%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s7-p0",
+          "text": "This paragraph belongs to section 8 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s7-p1",
+          "text": "This paragraph belongs to section 8 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s7-p2",
+          "text": "This paragraph belongs to section 8 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s7-p3",
+          "text": "This paragraph belongs to section 8 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s7-p4",
+          "text": "This paragraph belongs to section 8 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-8",
+      "kicker": "Section 09",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "93%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s8-p0",
+          "text": "This paragraph belongs to section 9 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s8-p1",
+          "text": "This paragraph belongs to section 9 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s8-p2",
+          "text": "This paragraph belongs to section 9 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s8-p3",
+          "text": "This paragraph belongs to section 9 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s8-p4",
+          "text": "This paragraph belongs to section 9 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "kicker": "Section 10",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "94%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s9-p0",
+          "text": "This paragraph belongs to section 10 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s9-p1",
+          "text": "This paragraph belongs to section 10 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s9-p2",
+          "text": "This paragraph belongs to section 10 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s9-p3",
+          "text": "This paragraph belongs to section 10 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s9-p4",
+          "text": "This paragraph belongs to section 10 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "kicker": "Section 11",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "95%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s10-p0",
+          "text": "This paragraph belongs to section 11 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s10-p1",
+          "text": "This paragraph belongs to section 11 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s10-p2",
+          "text": "This paragraph belongs to section 11 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s10-p3",
+          "text": "This paragraph belongs to section 11 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s10-p4",
+          "text": "This paragraph belongs to section 11 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-11",
+      "kicker": "Section 12",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "96%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s11-p0",
+          "text": "This paragraph belongs to section 12 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s11-p1",
+          "text": "This paragraph belongs to section 12 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s11-p2",
+          "text": "This paragraph belongs to section 12 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s11-p3",
+          "text": "This paragraph belongs to section 12 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s11-p4",
+          "text": "This paragraph belongs to section 12 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-12",
+      "kicker": "Section 13",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "97%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s12-p0",
+          "text": "This paragraph belongs to section 13 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s12-p1",
+          "text": "This paragraph belongs to section 13 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s12-p2",
+          "text": "This paragraph belongs to section 13 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s12-p3",
+          "text": "This paragraph belongs to section 13 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s12-p4",
+          "text": "This paragraph belongs to section 13 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-13",
+      "kicker": "Section 14",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "98%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s13-p0",
+          "text": "This paragraph belongs to section 14 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s13-p1",
+          "text": "This paragraph belongs to section 14 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s13-p2",
+          "text": "This paragraph belongs to section 14 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s13-p3",
+          "text": "This paragraph belongs to section 14 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s13-p4",
+          "text": "This paragraph belongs to section 14 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-14",
+      "kicker": "Section 15",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "99%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s14-p0",
+          "text": "This paragraph belongs to section 15 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s14-p1",
+          "text": "This paragraph belongs to section 15 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s14-p2",
+          "text": "This paragraph belongs to section 15 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s14-p3",
+          "text": "This paragraph belongs to section 15 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s14-p4",
+          "text": "This paragraph belongs to section 15 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-15",
+      "kicker": "Section 16",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "100%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s15-p0",
+          "text": "This paragraph belongs to section 16 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s15-p1",
+          "text": "This paragraph belongs to section 16 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s15-p2",
+          "text": "This paragraph belongs to section 16 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s15-p3",
+          "text": "This paragraph belongs to section 16 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s15-p4",
+          "text": "This paragraph belongs to section 16 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-16",
+      "kicker": "Section 17",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "101%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s16-p0",
+          "text": "This paragraph belongs to section 17 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s16-p1",
+          "text": "This paragraph belongs to section 17 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s16-p2",
+          "text": "This paragraph belongs to section 17 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s16-p3",
+          "text": "This paragraph belongs to section 17 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s16-p4",
+          "text": "This paragraph belongs to section 17 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-17",
+      "kicker": "Section 18",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "102%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s17-p0",
+          "text": "This paragraph belongs to section 18 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s17-p1",
+          "text": "This paragraph belongs to section 18 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s17-p2",
+          "text": "This paragraph belongs to section 18 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s17-p3",
+          "text": "This paragraph belongs to section 18 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s17-p4",
+          "text": "This paragraph belongs to section 18 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-18",
+      "kicker": "Section 19",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "103%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s18-p0",
+          "text": "This paragraph belongs to section 19 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s18-p1",
+          "text": "This paragraph belongs to section 19 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s18-p2",
+          "text": "This paragraph belongs to section 19 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s18-p3",
+          "text": "This paragraph belongs to section 19 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s18-p4",
+          "text": "This paragraph belongs to section 19 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-19",
+      "kicker": "Section 20",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "104%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s19-p0",
+          "text": "This paragraph belongs to section 20 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s19-p1",
+          "text": "This paragraph belongs to section 20 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s19-p2",
+          "text": "This paragraph belongs to section 20 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s19-p3",
+          "text": "This paragraph belongs to section 20 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s19-p4",
+          "text": "This paragraph belongs to section 20 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-20",
+      "kicker": "Section 21",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "105%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s20-p0",
+          "text": "This paragraph belongs to section 21 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s20-p1",
+          "text": "This paragraph belongs to section 21 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s20-p2",
+          "text": "This paragraph belongs to section 21 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s20-p3",
+          "text": "This paragraph belongs to section 21 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s20-p4",
+          "text": "This paragraph belongs to section 21 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-21",
+      "kicker": "Section 22",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "106%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s21-p0",
+          "text": "This paragraph belongs to section 22 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s21-p1",
+          "text": "This paragraph belongs to section 22 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s21-p2",
+          "text": "This paragraph belongs to section 22 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s21-p3",
+          "text": "This paragraph belongs to section 22 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s21-p4",
+          "text": "This paragraph belongs to section 22 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-22",
+      "kicker": "Section 23",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "107%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s22-p0",
+          "text": "This paragraph belongs to section 23 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s22-p1",
+          "text": "This paragraph belongs to section 23 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s22-p2",
+          "text": "This paragraph belongs to section 23 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s22-p3",
+          "text": "This paragraph belongs to section 23 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s22-p4",
+          "text": "This paragraph belongs to section 23 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    },
+    {
+      "id": "section-23",
+      "kicker": "Section 24",
+      "title": "A paginated section generated from JSON #5",
+      "metric": "108%",
+      "note": "This card uses break-inside: avoid, so it should move as a single block when possible.",
+      "paragraphs": [
+        {
+          "id": "s23-p0",
+          "text": "This paragraph belongs to section 24 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s23-p1",
+          "text": "This paragraph belongs to section 24 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s23-p2",
+          "text": "This paragraph belongs to section 24 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s23-p3",
+          "text": "This paragraph belongs to section 24 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        },
+        {
+          "id": "s23-p4",
+          "text": "This paragraph belongs to section 24 and is generated from the JSON document model. It is intentionally verbose so that Paged.js has enough content to fragment into many pages. The template is Alpine-driven, but the pagination output is produced by Paged.js. Revision 5 changes the text without replacing the whole application shell. Stable page restoration is handled by measuring the page closest to the viewport center before the update."
+        }
+      ]
+    }
+  ]
+}

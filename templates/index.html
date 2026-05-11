@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paged.js + Alpine + Tailwind JSON Test</title>
+  <link rel="icon" href="data:," />
+
+  <script src="{{ url_for('static', filename='vendor/tailwindcss.js') }}"></script>
+
+  <script>
+    window.PagedConfig = { auto: false };
+  </script>
+
+  <script src="{{ url_for('static', filename='vendor/paged.polyfill.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/document-model.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/html-renderer.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/paged-preview.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='vendor/alpine.cdn.min.js') }}"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" />
+</head>
+
+<body x-data="app()" x-init="init()" class="min-h-screen text-slate-900">
+  <div class="sticky top-0 z-50 border-b border-slate-300 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
+      <div>
+        <h1 class="text-sm font-semibold tracking-tight">Paged.js JSON Template Test</h1>
+        <p class="text-xs text-slate-500">
+          <span x-text="doc.sections.length"></span> sections ·
+          <span x-text="pageCount"></span> parsed pages ·
+          update from console with <code class="rounded bg-slate-100 px-1">demoUpdate()</code>
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button @click="mutateJson()" class="rounded-xl bg-slate-900 px-3 py-2 text-xs font-medium text-white shadow-sm hover:bg-slate-700">
+          Update JSON
+        </button>
+        <button @click="shuffleTitles()" class="rounded-xl border border-slate-300 bg-white px-3 py-2 text-xs font-medium hover:bg-slate-50">
+          Shuffle titles
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main class="mx-auto max-w-5xl px-4">
+    <div class="my-4 rounded-2xl border border-slate-300 bg-white p-4 text-xs text-slate-600 shadow-sm">
+      Try scrolling to page 7, then run <code class="rounded bg-slate-100 px-1">demoUpdate()</code> in the console.
+      The script stores the currently centered page before repagination and restores that page after Paged.js finishes.
+    </div>
+  </main>
+
+  <article id="source"></article>
+  <section id="preview"></section>
+</body>
+</html>
