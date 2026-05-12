@@ -1,4 +1,5 @@
 import json
+import os
 import time
 from pathlib import Path
 
@@ -54,6 +55,11 @@ def index():
     return render_template("index.html")
 
 
+@app.get("/health")
+def health():
+    return jsonify({"ok": True})
+
+
 @app.get("/api/document")
 def get_document():
     return jsonify(read_document())
@@ -97,5 +103,12 @@ def events():
     )
 
 
+def main():
+    host = os.environ.get("PAGEDJS_HOST", "127.0.0.1")
+    port = int(os.environ.get("PAGEDJS_PORT", "5000"))
+    debug = os.environ.get("PAGEDJS_DEBUG", "").lower() in {"1", "true", "yes"}
+    app.run(host=host, port=port, debug=debug, threaded=True, use_reloader=False)
+
+
 if __name__ == "__main__":
-    app.run(debug=True, threaded=True)
+    main()

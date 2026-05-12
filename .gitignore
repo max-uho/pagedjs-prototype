@@ -1,4 +1,8 @@
-.venv
+.DS_Store
+.venv/
 __pycache__/
+*.py[cod]
+node_modules/
+target/
 .playwright-mcp/
 console*.log
