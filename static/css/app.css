@@ -85,14 +85,24 @@ body {
     background: white !important;
   }
 
-  .pagedjs_pages {
+  #preview .pagedjs_pages {
     display: block !important;
+    width: var(--page-w) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
     margin: 0 !important;
     padding: 0 !important;
     background: white !important;
+    overflow: visible !important;
   }
 
-  .pagedjs_page {
+  #preview .pagedjs_pages .pagedjs_page {
+    display: block !important;
+    width: var(--page-w) !important;
+    height: var(--page-h) !important;
+    min-height: var(--page-h) !important;
+    max-height: var(--page-h) !important;
     margin: 0 !important;
     padding: 0 !important;
     box-shadow: none !important;
@@ -103,18 +113,27 @@ body {
     page-break-after: always;
   }
 
-  .pagedjs_page:last-child {
+  #preview .pagedjs_pages .pagedjs_page:last-child {
     break-after: auto;
     page-break-after: auto;
   }
 
-  .pagedjs_pagebox {
+  #preview .pagedjs_sheet {
+    width: var(--page-w) !important;
+    height: var(--page-h) !important;
+    min-height: var(--page-h) !important;
+    max-height: var(--page-h) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #preview .pagedjs_pagebox {
     box-shadow: none !important;
     outline: none !important;
   }
 
-  .pagedjs_bleed,
-  .pagedjs_marks {
+  #preview .pagedjs_bleed,
+  #preview .pagedjs_marks {
     display: none !important;
   }
 }

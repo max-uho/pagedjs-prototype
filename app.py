@@ -1,5 +1,7 @@
+import argparse
 import json
 import os
+import webbrowser
 import time
 from pathlib import Path
 
@@ -9,17 +11,20 @@ from parser import parse_document
 
 
 BASE_DIR = Path(__file__).resolve().parent
-USER_DIR = BASE_DIR / "user"
-CONTENT_PATH = USER_DIR / "content.md"
-TEMPLATE_PATH = USER_DIR / "template.html"
-PAGE_CSS_PATH = USER_DIR / "page.css"
+DEFAULT_USER_DIR = BASE_DIR / "user"
+CONTENT_PATH = Path(os.environ.get("PAGEDJS_CONTENT_PATH", DEFAULT_USER_DIR / "content.md")).resolve()
+TEMPLATE_PATH = Path(os.environ.get("PAGEDJS_TEMPLATE_PATH", DEFAULT_USER_DIR / "template.html")).resolve()
+PAGE_CSS_PATH = Path(os.environ.get("PAGEDJS_PAGE_CSS_PATH", DEFAULT_USER_DIR / "page.css")).resolve()
 WATCHED_PATHS = (CONTENT_PATH, TEMPLATE_PATH, PAGE_CSS_PATH)
 
 app = Flask(__name__)
 
 
 def read_document():
-    return parse_document(CONTENT_PATH.read_text(encoding="utf-8"))
+    document = parse_document(CONTENT_PATH.read_text(encoding="utf-8"))
+    document["sourceName"] = CONTENT_PATH.name
+    document["sourcePath"] = str(CONTENT_PATH)
+    return document
 
 
 def read_template():
@@ -40,14 +45,22 @@ def file_version(path):
 
 def watched_paths():
     paths = list(WATCHED_PATHS)
-    assets_dir = USER_DIR / "assets"
-    if assets_dir.exists():
-        paths.extend(path for path in assets_dir.rglob("*") if path.is_file())
+    for assets_dir in asset_dirs():
+        if assets_dir.exists():
+            paths.extend(path for path in assets_dir.rglob("*") if path.is_file())
     return sorted(set(paths))
 
 
 def app_version():
-    return "|".join(f"{path.relative_to(USER_DIR)}:{file_version(path)}" for path in watched_paths())
+    return "|".join(f"{path}:{file_version(path)}" for path in watched_paths())
+
+
+def asset_dirs():
+    dirs = [DEFAULT_USER_DIR / "assets"]
+    content_assets = CONTENT_PATH.parent / "assets"
+    if content_assets not in dirs:
+        dirs.insert(0, content_assets)
+    return dirs
 
 
 @app.get("/")
@@ -77,7 +90,10 @@ def get_page_css():
 
 @app.get("/user/assets/<path:filename>")
 def user_asset(filename):
-    return send_from_directory(USER_DIR / "assets", filename)
+    for assets_dir in asset_dirs():
+        if (assets_dir / filename).is_file():
+            return send_from_directory(assets_dir, filename)
+    return send_from_directory(DEFAULT_USER_DIR / "assets", filename)
 
 
 @app.get("/api/events")
@@ -104,10 +120,24 @@ def events():
 
 
 def main():
-    host = os.environ.get("PAGEDJS_HOST", "127.0.0.1")
-    port = int(os.environ.get("PAGEDJS_PORT", "5000"))
-    debug = os.environ.get("PAGEDJS_DEBUG", "").lower() in {"1", "true", "yes"}
-    app.run(host=host, port=port, debug=debug, threaded=True, use_reloader=False)
+    global CONTENT_PATH, WATCHED_PATHS
+
+    parser = argparse.ArgumentParser(description="Run the Paged.js markdown preview server.")
+    parser.add_argument("file", nargs="?", help="Optional markdown file to preview.")
+    parser.add_argument("--host", default=os.environ.get("PAGEDJS_HOST", "127.0.0.1"))
+    parser.add_argument("--port", type=int, default=int(os.environ.get("PAGEDJS_PORT", "5000")))
+    parser.add_argument("--open", action="store_true", help="Open the preview in the default browser.")
+    parser.add_argument("--debug", action="store_true", help="Run Flask in debug mode.")
+    args = parser.parse_args()
+
+    if args.file:
+        CONTENT_PATH = Path(args.file).expanduser().resolve()
+        WATCHED_PATHS = (CONTENT_PATH, TEMPLATE_PATH, PAGE_CSS_PATH)
+
+    debug = args.debug or os.environ.get("PAGEDJS_DEBUG", "").lower() in {"1", "true", "yes"}
+    if args.open:
+        webbrowser.open(f"http://{args.host}:{args.port}/")
+    app.run(host=args.host, port=args.port, debug=debug, threaded=True, use_reloader=False)
 
 
 if __name__ == "__main__":

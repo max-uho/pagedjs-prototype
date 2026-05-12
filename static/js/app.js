@@ -32,6 +32,7 @@
       },
 
       async refresh() {
+        window.__pagedPreviewReady = false;
         const [nextDoc, nextTemplate, nextPageCss] = await Promise.all([
           fetchDocument(),
           fetchTemplate(),
@@ -64,6 +65,7 @@
             this.pageCss,
             () => this.$nextTick()
           );
+          window.__pagedPreviewReady = true;
         } finally {
           this.isRendering = false;
         }

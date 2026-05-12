@@ -42,6 +42,18 @@ To use a different port:
 PAGEDJS_PORT=5055 .venv/bin/python app.py
 ```
 
+To preview a specific markdown file and open it in your browser:
+
+```sh
+.venv/bin/python app.py /path/to/document.md --open
+```
+
+You can combine this with host and port arguments:
+
+```sh
+.venv/bin/python app.py /path/to/document.md --host 127.0.0.1 --port 5055 --open
+```
+
 ## Run The Tauri App In Development
 
 ```sh
@@ -49,7 +61,18 @@ cd tauri-shell
 npm run dev
 ```
 
-The app chooses a free local port, starts Flask, waits for `/health`, and loads the preview. Press `Cmd+P` on macOS, or `Ctrl+P` on other platforms, to open the native print dialog.
+The app chooses a free local port, starts Flask, waits for `/health`, and loads the preview.
+
+File menu shortcuts:
+
+- `Cmd+O` on macOS, or `Ctrl+O` on other platforms, opens a markdown file in a new window.
+- `Cmd+W` on macOS, or `Ctrl+W` on other platforms, closes the focused window.
+- `Cmd+P` on macOS, or `Ctrl+P` on other platforms, opens the native print dialog for the focused window.
+- `Cmd+Q` on macOS, or `Ctrl+Q` on other platforms, quits the app.
+
+Each opened markdown file gets its own window and its own Flask preview process. The app watches the opened markdown file, the shared `user/template.html`, the shared `user/page.css`, and assets folders for changes.
+
+Printing uses the focused macOS WebKit view and sets the paper size from `user/page.css` before showing the print dialog. It does not use Chromium.
 
 ## Build The Tauri App
 
