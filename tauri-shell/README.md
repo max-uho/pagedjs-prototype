@@ -2,4 +2,4 @@
 
 This folder is a thin desktop wrapper around the Flask app in the repository root.
 
-See the root `README.md` for full install, `.venv`, development, and build instructions.
+See the root `README.md` for full install, `.venv`, development, file-open, print, and build instructions.
